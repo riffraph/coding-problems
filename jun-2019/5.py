@@ -64,12 +64,9 @@ def search(query, tree):
     # find the subtree which the query string matches
     lastNode = tree
     for char in query:
-        print(char)
         if char in lastNode.children:
-            print("Match found: ", char)
             lastNode = lastNode.children[char]
         else:
-            print("No match found")
             return []
             
     # given the last node, get all the branches from that node
@@ -122,7 +119,9 @@ def test_1():
     list = ['dog', 'deer', 'deal', 'a']
     tree = listToTree(list)
     result = search('de', tree)
-    print("Search result=", result)
+    assert(result == ['deer', 'deal'])
+
+
 
 
 test_1()
@@ -132,6 +131,6 @@ def test_2():
     list = ['bee', 'a', 'month', 'are', 'best']
     tree = listToTree(list)
     result = search('a', tree)
-    print("Search result=", result)
+    assert(result == ['a', 'are'])
 
 test_2()
