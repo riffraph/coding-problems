@@ -1,3 +1,4 @@
+# 7-Jun-2019
 # given a integer k and a string s, find the length of the longest substring that contains at most k distinct characters
 # e.g. given s = "abcba" and k = 2, ths longest substring with k distinct characters is "bcb"
 
@@ -45,19 +46,3 @@ def findSubstr(string, k):
                     currSubstr = Substr(k, buffer)
 
     return longestSubstr
-
-
-def test_1():
-    s = 'abcba'
-    k = 2
-    assert(findSubstr(s, k) == 'bcb')
-
-test_1()
-
-
-def test_2():
-    s = 'cgbaat'
-    k = 3
-    assert(findSubstr(s, k) == 'gbaa')
-
-test_2()

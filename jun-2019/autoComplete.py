@@ -1,3 +1,4 @@
+# 5-Jun-2019
 # autocomplete problem
 
 class Node:
@@ -113,24 +114,3 @@ def addWordToTree(word, tree):
         addWordToTree(remainder, childTree) 
 
     return    
-
-
-def test_1():
-    list = ['dog', 'deer', 'deal', 'a']
-    tree = listToTree(list)
-    result = search('de', tree)
-    assert(result == ['deer', 'deal'])
-
-
-
-
-test_1()
-
-
-def test_2():
-    list = ['bee', 'a', 'month', 'are', 'best']
-    tree = listToTree(list)
-    result = search('a', tree)
-    assert(result == ['a', 'are'])
-
-test_2()
